@@ -1,0 +1,17 @@
+---
+# Source: datahub/charts/datahub-gms/templates/ingress.yaml
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: datahub-datahub-gms
+  labels:
+    helm.sh/chart: datahub-gms-0.2.3
+    app.kubernetes.io/name: datahub-gms
+    app.kubernetes.io/instance: datahub
+    app.kubernetes.io/version: "0.3.1"
+    app.kubernetes.io/managed-by: Helm
+spec:
+  rules:
+    - host: "chart-example.local"
+      http:
+        paths:
